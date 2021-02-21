@@ -1,3 +1,4 @@
+/* BOX SHADOW */
 * {
   margin: 0;
   padding: 0;
@@ -26,4 +27,40 @@ body {
   background: linear-gradient(to right bottom, #FF3366, #BA265D);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* BOX SHADOW */
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background: #f4f2f2;
+  -webkit-box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  min-height: 50rem;
+}
+
+.container .header {
+  height: 7rem;
+  background: #fff;
+  border-bottom: #f4f2f2;
+}
+
+.container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .content .sidebar {
+  background: #333;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10%;
+          flex: 0 0 10%;
+}
+
+.container .content .hotel-view {
+  background: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
