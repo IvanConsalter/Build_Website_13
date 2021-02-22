@@ -15,3 +15,10 @@ $color-white: #fff;
 
 /* BOX SHADOW */
 $shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+
+/* MIXINS */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
