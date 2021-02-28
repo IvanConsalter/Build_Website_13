@@ -12,7 +12,7 @@
         font-size: 1.4rem;
         height: 7rem;
         background: $color-white;
-        border-bottom: 1px solid $color-grey-light-2;
+        border-bottom: $line;
         @include flex-center;
         justify-content: space-between;
     }
@@ -35,5 +35,25 @@
         }
     }
 
+}
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background: $color-grey-light-1;
+    border-bottom: $line;
+    font-size: 1.4rem;
+}
+
+.description {
+    background: $color-white;
+    box-shadow: $shadow-light;
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+}
+
+.user-reviews {
+    flex: 1;
 }
 
