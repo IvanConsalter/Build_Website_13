@@ -165,7 +165,34 @@
                         </div>
 
                         <div class="user-reviews">
+                            <figure class="review">
+                                <blockquote class="review__text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt ipsa minima sit culpa consequuntur! Voluptate, quaerat.
+                                </blockquote>
+                                <figcaption class="review__user">
+                                    <img src="./img/user-1.jpg" alt="user-1" class="review__photo">
+                                    <div class="review__user-box">
+                                        <p class="review__user-name">Nick Smith</p>
+                                        <p class="review__user-date">Feb 20rd, <span class="year"></span></p>
+                                    </div>
+                                    <div class="review__rating">8.0</div>
+                                </figcaption>
+                            </figure>
+                            <figure class="review">
+                                <blockquote class="review__text">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, ea.
+                                </blockquote>
+                                <figcaption class="review__user">
+                                    <img src="./img/user-2.jpg" alt="user-2" class="review__photo">
+                                    <div class="review__user-box">
+                                        <p class="review__user-name">Anna Jay</p>
+                                        <p class="review__user-date">Sept 13th, <span class="year"></span></p>
+                                    </div>
+                                    <div class="review__rating">8.9</div>
+                                </figcaption>
+                            </figure>
 
+                            <button class="btn-inline">Show all <span>&rarr;</span></button>
                         </div>
                     </div>
                 </main>
@@ -175,7 +202,9 @@
         <script>
             let year = new Date().getFullYear()
 
-            document.querySelector('.year').textContent = year
+            document.querySelectorAll('.year').forEach(x => {
+                x.textContent = (year - 1)
+            })
         </script>
     </body>
 </html>

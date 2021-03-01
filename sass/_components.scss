@@ -276,11 +276,20 @@
     background-color: transparent;
     cursor: pointer;
     transition: all .2s;
+
+    & span {
+        margin-left: .3rem;
+        transition: margin-left .2s;
+    }
     
     &:hover {
         color: $color-grey-dark-1;
         -webkit-animation: pulsate 1s linear infinite;
                 animation: pulsate 1s linear infinite;
+
+        & span {
+            margin-left: .8rem;
+        }
     }
 }
 
@@ -361,13 +370,75 @@
 
     &__photo {
         box-sizing: content-box;
-        width: 4rem;
-        height: 4rem;
+        @include photo-size;
         border-radius: 50%;
         border: 3px solid $color-white;
 
         &:not(:last-child) {
             margin-right: -1.5rem;
         }
+    }
+}
+
+/* REVIEWS */
+.review {
+
+    background: $color-white;
+    box-shadow: $shadow-light;
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+
+    &__text {
+        margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
+    }
+
+    &__user {
+
+        @include flex-center;
+        justify-content: space-between;
+
+        &-box {
+            margin-right: auto;
+        }
+    
+        &-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: .4rem;
+        }
+
+        &-date {
+            font-size: 1rem;
+            color: $color-grey-dark-3;
+        }
+    }
+
+    &__photo {
+        @include photo-size;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+
+    &__rating {
+        color: $color-primary;
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+        line-height: 1;
+        font-size: 20rem;
+        color: $color-grey-light-3;
+        font-family: sans-serif;
+        z-index: 1;
     }
 }
