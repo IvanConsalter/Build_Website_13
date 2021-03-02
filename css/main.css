@@ -572,6 +572,72 @@ body {
   z-index: 1;
 }
 
+/* CALL TO ACTION */
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.cta__book-now {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(#FF3366), to(#BA265D));
+  background: linear-gradient(to right, #FF3366, #BA265D);
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn > * {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.btn__visible {
+  padding: 2rem 7.5rem;
+}
+
+.btn__invisible {
+  padding: 2rem 0;
+  position: absolute;
+  left: 0;
+  top: -100%;
+}
+
+.btn:hover {
+  background: -webkit-gradient(linear, right top, left top, from(#FF3366), to(#BA265D));
+  background: linear-gradient(to left, #FF3366, #BA265D);
+  -webkit-animation: pulsate 1s linear infinite;
+          animation: pulsate 1s linear infinite;
+}
+
+.btn:hover .btn__visible {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.btn:hover .btn__invisible {
+  top: 0;
+}
+
+.btn:focus {
+  outline: none;
+}
+
 /* BOX SHADOW */
 /* BORDER */
 /* MIXINS */
